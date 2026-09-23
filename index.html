@@ -59,6 +59,31 @@
   </section>
 
   <section class="card">
+    <div class="section-title"><h2>Registro de comidas</h2><input id="foodDate" type="date" class="date-compact"></div>
+    <div class="daily-summary">
+      <div><strong id="eatenCalories">0</strong><span>Consumidas</span></div>
+      <div><strong id="remainingCalories">--</strong><span>Restantes</span></div>
+      <div><strong id="eatenMacros">P 0 · C 0 · G 0</strong><span>Macros (g)</span></div>
+    </div>
+    <div class="progress calorie-progress"><div id="calorieBar"></div></div>
+    <div class="food-search">
+      <input id="foodSearch" type="search" placeholder="Buscar alimento: pollo, arroz, yogurt...">
+      <button id="onlineSearchBtn" class="secondary" type="button">Buscar productos online</button>
+    </div>
+    <p class="muted small">Primero busca en la base local. La búsqueda online usa Open Food Facts y necesita conexión.</p>
+    <div id="foodResults" class="food-results"></div>
+    <details class="custom-food"><summary>Crear alimento personalizado</summary>
+      <form id="customFoodForm" class="grid compact-grid">
+        <label>Nombre<input id="customName" required></label><label>Porción (g/ml)<input id="customServing" type="number" min="1" value="100" required></label>
+        <label>Calorías<input id="customKcal" type="number" min="0" required></label><label>Proteínas (g)<input id="customProtein" type="number" min="0" step="0.1" required></label>
+        <label>Carbohidratos (g)<input id="customCarbs" type="number" min="0" step="0.1" required></label><label>Grasas (g)<input id="customFat" type="number" min="0" step="0.1" required></label>
+        <button class="primary full">Guardar en mi base</button>
+      </form>
+    </details>
+    <div id="mealSections"></div>
+  </section>
+
+  <section class="card">
     <div class="section-title"><h2>Agua de hoy</h2><button id="resetWater" class="link">Reiniciar</button></div>
     <div class="water-row"><button id="minusWater">−</button><div><strong id="waterAmount">0</strong> ml<br><span id="waterGoal" class="muted">Meta sugerida: -- ml</span></div><button id="plusWater">+</button></div>
     <div class="progress"><div id="waterBar"></div></div>
@@ -75,6 +100,7 @@
 
   <section class="card disclaimer"><strong>Importante</strong><p>Esta aplicación entrega estimaciones educativas, no diagnóstico ni prescripción. El gasto real puede variar. Si tienes una condición médica, embarazo, antecedentes de trastornos alimentarios o necesitas una intervención intensiva, consulta a un profesional de salud.</p></section>
 </main>
+<script src="food-db.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
