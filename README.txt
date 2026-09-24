@@ -1,6 +1,8 @@
-MI NUTRICION v1.2
-Antes de actualizar, exporta un respaldo JSON.
-Reemplaza TODOS los archivos de la raiz del repositorio GitHub por estos archivos.
-La base local ahora reconoce: huevo, huevo cocido, huevo duro, huevo hervido, egg y boiled egg.
-Incluye favoritos, comidas habituales, progreso visual de macros, busqueda español/ingles y codigo de barras con ingreso manual alternativo.
-Si el iPhone muestra la version anterior, abre primero el sitio en Safari; luego elimina los datos del sitio o reinstala el icono.
+MI NUTRICION v1.3
+- Base local oculta hasta escribir.
+- Solo código de barras manual.
+- Comida inteligente con vista previa antes de agregar.
+- Peso opcional, registrado cuando quieras.
+- Migración automática desde los datos locales de v1.2.
+La comida inteligente usa reglas locales, no IA en la nube. Usa cantidades y revisa la vista previa.
+Para actualizar GitHub: reemplaza todos los archivos de la raíz, confirma el commit y abre primero la URL en Safari.
